@@ -29,7 +29,7 @@
 		<!-- 导航栏 -->
 		<?php require_once './func/nav.php'; echo $nav ; ?>
 		<!-- cotent>
-		<?php require_once './func/saying_page'; echo $saying; ?>
+		<?php require_once './func/saying.php'; echo $saying; ?>
 		<!-- this is the btm-->
 		<footer class="bs-docs-footer" role="contentinfo">
 			<div class="container ">
