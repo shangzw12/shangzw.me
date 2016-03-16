@@ -1,8 +1,8 @@
 <?php
 	require_once './file_include.php';
-	$con = mysql_connect("localhost",db_name,"shangzwszw12");
+	$con = mysql_connect("localhost",$user_name,"shangzwszw12");
 	if(!$con){
-		die('connect failed' .mysql_error());
+		die("connect failed\n" .mysql_error());
 	}
 	mysql_select_db("blackpan_shangzw.me",$con);	
 	if(!mysql_fetch_row(mysql_query("SHOW TABLE LIKE 'saying'"))){

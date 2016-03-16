@@ -1,5 +1,3 @@
 <?php
-	$con = <<< END
-	"test"
-END
+	$user_name = 'root';
 ?>
