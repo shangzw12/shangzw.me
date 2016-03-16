@@ -28,7 +28,6 @@
 	<div class='container bs-docs-container' style="background-color:white; opacity:0.5">
 		<!-- 导航栏 -->
 		<?php require_once 'nav.php'; echo $nav ; ?>
-
 		<!-- this is the pic -->
 		<div class='container'>
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">

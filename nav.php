@@ -7,16 +7,16 @@
 						<a href="http://www.shangzw.me">&nbsp主 页&nbsp</a>
 					</li>
 					<li>
-						<a href="http://www.shangzw.me">tag1&nbsp</a>
+						<a href="http://www.shangzw.me/sayings">说说</a>
 					</li>
 					<li>
-						<a href="http://www.shangzw.me">tag2&nbsp</a>
+						<a href="http://www.shangzw.me/passages">所思</a>
 					</li>
 					<li>
-						<a href="http://www.shangzw.me">tag3&nbsp</a>
+						<a href="http://www.shangzw.me/collections">不错哦</a>
 					</li>
 					<li>
-						<a href="http://www.shangzw.me">tag4</a>
+						<a href="http://www.shangzw.me/say_something">说点啥</a>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
