@@ -22,12 +22,12 @@
 	</title>
 </head>
 
-<body <?php require_once 'bg.php'; echo $bg; ?>>
-	<?php require_once 'page_header.php'; echo $page_header;?>
+<body <?php require_once './func/bg.php'; echo $bg; ?>>
+	<?php require_once './func/page_header.php'; echo $page_header;?>
 	<!-- 主体部分 -->
 	<div class='container bs-docs-container' style="background-color:white; opacity:0.5">
 		<!-- 导航栏 -->
-		<?php require_once 'nav.php'; echo $nav ; ?>
+		<?php require_once './func/nav.php'; echo $nav ; ?>
 		<!-- this is the pic -->
 		<div class='container'>
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
