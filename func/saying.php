@@ -1,5 +1,5 @@
 <?php
-	require_once './file_include.php' ;
+	require_once 'file_include.php';
 	$con = mysql_connect("localhost",$user_name,"shangzwszw12");
 	if(!$con){
 		die("connect failed\n" .mysql_error());
