@@ -1,3 +1,3 @@
 <?php
-	$user_name = 'root';
+	$db_name = 'test';
 ?>

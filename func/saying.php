@@ -4,11 +4,12 @@
 	if(!$con){
 		die("connect failed\n" .mysql_error());
 	}
-	mysql_select_db("blackpan_shangzw.me",$con);	
+	mysql_select_db("test",$con);	
 	if(!mysql_fetch_row(mysql_query("SHOW TABLE LIKE 'saying'"))){
 		$sql = "SELECT * from saying";
 		$saying = mysql_query($sql,$con);
-		while(mysql_fetch_array($saying)){
+		//echo $saying;
+		while($row = mysql_fetch_array($saying)){
 			echo "
 	<div class='row'>
 	<!-- head_pic-->
@@ -32,14 +33,14 @@
 	<!--content-->
 	<div class='col-md-12'>
 	";
-	echo $saying['content'];
+	echo $row['content'];
 	echo "	
 	</div>
 	<!-- btm -->
 	<div class='col-md-4'>
 		<p>
 		";
-	echo $saying['time'];
+	echo $row['time'];
 	echo "</p>
 	</div>
 	<div class='col-md-4'>
@@ -49,7 +50,7 @@
 	</div>
 	<div class='col-md-4'>
 		<p>";
-	echo $saying['like_num'];
+	echo $row['like_num'];
 	echo "</p>
 	</div>
 	</div>";
