@@ -1,4 +1,5 @@
 <?php
+	require_once './database_name.php'
 	$con = mysql_connect("localhost","blackpan_shangzw","shangzwszw12");
 	if(!$con){
 		die('connect failed' .mysql_error());
