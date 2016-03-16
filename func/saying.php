@@ -4,56 +4,41 @@
 	if(!$con){
 		die("connect failed\n" .mysql_error());
 	}
-	mysql_select_db("test",$con);	
-	if(!mysql_fetch_row(mysql_query("SHOW TABLE LIKE 'saying'"))){
+	mysql_select_db($db_name,$con);	
+	if(true){
 		$sql = "SELECT * from saying";
 		$saying = mysql_query($sql,$con);
 		//echo $saying;
-		while($row = mysql_fetch_array($saying)){
+		while($row = mysql_fetch_array($saying,MYSQL_BOTH)){
 			echo "
-	<div class='row'>
-	<!-- head_pic-->
-	<div class='col-md-3'>
-		<img src=
-		";
-		echo $head_pic;
-		echo "
-		/>
-	</div>
-	<div class='col-md-3'>
-		<h4>
-		";
-		echo $name;
-		echo "		
-		</h4>
-	</div>
-	<div class='col-md-6'>
-		<p>something</p>
-	</div>
-	<!--content-->
-	<div class='col-md-12'>
-	";
-	echo $row['content'];
-	echo "	
-	</div>
-	<!-- btm -->
-	<div class='col-md-4'>
-		<p>
-		";
-	echo $row['time'];
-	echo "</p>
-	</div>
-	<div class='col-md-4'>
-		<p> ";
-	echo "something";
-	echo "</p>
-	</div>
-	<div class='col-md-4'>
-		<p>";
-	echo $row['like_num'];
-	echo "</p>
-	</div>
-	</div>";
+		</hr>
+		<div class='row'>
+		<!-- head_pic-->
+		<div class='col-md-3'>
+			<img src=$head_pic; width='50px'; height='50px'/>
+		</div>
+		<div class='col-md-9'>
+			<div class='row'>
+				<div class = 'col-md-12'> <p> $name </p> </div>
+				<div class = 'col-md-12'> <p>something</p> </div>			
+			</div>
+		</div>
+		<!--content-->
+		<div class='col-md-12'>
+			<p>$row[content]</p>
+		</div>
+		<!-- btm -->
+		<div class='col-md-4'>
+			<p>$row[time]</p>
+		</div>
+		<div class='col-md-4'>
+			<p> something </p>
+		</div>
+		<div class='col-md-4'>
+			<p> $row[like_num] </p>
+		</div>
+		</div>
+		</hr>";
 	}
 	}
 ?>

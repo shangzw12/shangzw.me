@@ -25,7 +25,7 @@
 <body <?php require_once './func/bg.php'; echo $bg; ?>>
 	<?php require_once './func/page_header.php'; echo $page_header;?>
 	<!-- 主体部分 -->
-	<div class='container bs-docs-container' style="background-color:white; opacity:0.5">
+	<div class='container bs-docs-container' style="background-color:white;">
 		<!-- 导航栏 -->
 		<?php require_once './func/nav.php'; echo $nav ; ?>
 		<!-- this is the pic -->

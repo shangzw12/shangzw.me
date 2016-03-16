@@ -25,11 +25,18 @@
 <body <?php require_once './func/bg.php'; echo $bg; ?>>
 	<?php require_once './func/page_header.php'; echo $page_header;?>
 	<!-- 主体部分 -->
-	<div class='container bs-docs-container' style="background-color:white; opacity:0.5">
+	<div class='container bs-docs-container' style="background-color:white; ">
 		<!-- 导航栏 -->
 		<?php require_once './func/nav.php'; echo $nav ; ?>
-		<!-- cotent>
-		<?php require_once './func/saying.php'; ?>
+		<!-- cotent-->
+		<div class='row'>
+			<div class='col-md-9'>
+				<?php require_once './func/saying.php'; ?>
+			</div>
+			<div class='col-md-3'>
+				<?php require_once './func/list.php'?>
+			</div>
+		</div>
 		<!-- this is the btm-->
 		<footer class="bs-docs-footer" role="contentinfo">
 			<div class="container ">
