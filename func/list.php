@@ -21,7 +21,7 @@
 		//查询，返回计数
 		echo 
 		"
-		<p><a href = 'search_one_time.php'>($one_time_count[0])</a></p>
+		<p><a href = 'search_one_time.php'>$one_time[0] ($one_time_count[0])</a></p>
 		";
 		echo "\n";		
 	}
