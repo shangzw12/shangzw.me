@@ -1,5 +1,3 @@
 <?php
-	$name = <<< END
-	"Shangzw"
-END
+	$name ="Shangzw";
 ?>

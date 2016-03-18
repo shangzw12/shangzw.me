@@ -30,10 +30,10 @@
 		<?php require_once './func/nav.php'; echo $nav ; ?>
 		<!-- cotent-->
 		<div class='row'>
-			<div class='col-md-9'> <!--main content-->
+			<div class='col-md-7 col-md-offset-1'> <!--main content-->
 				<?php require_once './func/saying.php'; ?>
 			</div>
-			<div class='col-md-3'> <!-- nav for list -->
+			<div class='col-md-3 col-md-offset-1'> <!-- nav for list -->
 				<?php require_once './func/list.php'?>
 			</div>
 		</div>
