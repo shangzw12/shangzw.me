@@ -36,4 +36,6 @@ note:
 	删除一行 delete from table_name where column_name = xxx;
 	select * from saying limit num; 选取满足条件的前num条记录 TOP（num） or TOP PERCENT
 	TIMESTAMP函数只能通过特定的字符串进行格式化 不能随便用
+	mysql_fecth_array 返回值是一个array！
+	php里面的字符串需要自己用引号进行标定！ 也就是说php就是一个翻译！！！
 	
