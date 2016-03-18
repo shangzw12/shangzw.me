@@ -1,1 +1,39 @@
 time type my_comment content comment like_num 
+
+for_list_time_tag 用来表示什么时间曾经有过更新
+-》可以通过distinct函数获取到一样的消息
+
+creat_time 创作的时间
+
+
+type:里面定义 passages/saying/saying_pic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+note:
+	mysql 对查询的结果计数 SELECT count(*) from xxx
+	增加一列 alter table table_name adder value_type xxxx
+	各种时间戳不同 TIMESTAMP和UNIX_TIMESTAMP不同
+	对查找到的时间格式化select date_format(creat_time,'%y-%m-%d') from table;
+	order by rule1,rule2
+	select distinct column from saying;
+	insert into table (column1,column2) value(value1, value2);
+	update table_name set attribute = xxx where xxx= xxx;
+	删除一行 delete from table_name where column_name = xxx;
+	select * from saying limit num; 选取满足条件的前num条记录 TOP（num） or TOP PERCENT
+	TIMESTAMP函数只能通过特定的字符串进行格式化 不能随便用
+	

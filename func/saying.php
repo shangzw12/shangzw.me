@@ -11,7 +11,7 @@
 		//echo $saying;
 		while($row = mysql_fetch_array($saying,MYSQL_BOTH)){
 			echo "
-		</hr>
+		<hr />
 		<div class='row'>
 		<!-- head_pic-->
 		<div class='col-md-3'>
@@ -37,8 +37,7 @@
 		<div class='col-md-4'>
 			<p> $row[like_num] </p>
 		</div>
-		</div>
-		</hr>";
+		</div>";
 	}
 	}
 ?>

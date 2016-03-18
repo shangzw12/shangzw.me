@@ -30,17 +30,17 @@
 		<?php require_once './func/nav.php'; echo $nav ; ?>
 		<!-- cotent-->
 		<div class='row'>
-			<div class='col-md-9'>
+			<div class='col-md-9'> <!--main content-->
 				<?php require_once './func/saying.php'; ?>
 			</div>
-			<div class='col-md-3'>
+			<div class='col-md-3'> <!-- nav for list -->
 				<?php require_once './func/list.php'?>
 			</div>
 		</div>
 		<!-- this is the btm-->
 		<footer class="bs-docs-footer" role="contentinfo">
 			<div class="container ">
-				<p align='center'> Posted by: shangzw</p>
+				<p align='center'>Posted by: shangzw</p>
 				<p align='center'>Contact information: shangzw12@163.com </p>
 			</div>
 		</footer>
