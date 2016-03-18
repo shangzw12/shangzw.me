@@ -25,6 +25,7 @@ type:里面定义 passages/saying/saying_pic
 
 
 note:
+	mysql里面只能是单引号
 	mysql 对查询的结果计数 SELECT count(*) from xxx
 	增加一列 alter table table_name adder value_type xxxx
 	各种时间戳不同 TIMESTAMP和UNIX_TIMESTAMP不同

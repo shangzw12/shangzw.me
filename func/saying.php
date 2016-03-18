@@ -6,7 +6,7 @@
 	}
 	mysql_select_db($db_name,$con);	
 	if(true){
-		$sql = "SELECT * from saying";
+		$sql = "SELECT * from $table_name";
 		$saying = mysql_query($sql,$con);
 		//echo $saying;
 		while($row = mysql_fetch_array($saying,MYSQL_BOTH)){

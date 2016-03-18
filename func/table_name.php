@@ -1,0 +1,1 @@
+<?php $table_name = "saying"; ?>
