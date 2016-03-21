@@ -18,12 +18,6 @@ type:里面定义 passages/saying/saying_pic
 
 
 
-
-
-
-
-
-
 note:
 	mysql里面只能是单引号
 	mysql 对查询的结果计数 SELECT count(*) from xxx
@@ -39,4 +33,5 @@ note:
 	TIMESTAMP函数只能通过特定的字符串进行格式化 不能随便用
 	mysql_fecth_array 返回值是一个array！
 	php里面的字符串需要自己用引号进行标定！ 也就是说php就是一个翻译！！！
+    limit n 查询n条记录
 	

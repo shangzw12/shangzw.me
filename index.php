@@ -24,6 +24,7 @@
 
 <body <?php require_once './func/bg.php'; echo $bg; ?>>
 	<?php require_once './func/page_header.php'; echo $page_header;?>
+    <?php require_once './func/file_include.php'; ?>
 	<!-- 主体部分 -->
 	<div class='container bs-docs-container' style="background-color:white;">
 		<!-- 导航栏 -->
@@ -69,6 +70,11 @@
 				</a>
 			</div>
 		</div>
+        <!-- this is the content -->
+        <div class='row'>
+            <h3>最近更新</div>
+            
+        </div>
 		
 		<!-- this is the btm-->
 		<footer class="bs-docs-footer" role="contentinfo">
