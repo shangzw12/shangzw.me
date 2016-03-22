@@ -4,4 +4,5 @@
 	require_once 'head_pho.php';
 	require_once 'user_name.php';
 	require_once 'table_name.php';
+    require_once 'funcs.php';
 ?>

@@ -4,6 +4,6 @@
 	style= 
 	"background-image:url(./material/bg0.jpg);
 	background-position:center; background-repeat: no-repeat; opacity:
-	$my_opacity ";
+	$my_opacity; background-attachment: fixed";
 END;
 ?>

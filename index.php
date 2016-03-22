@@ -41,18 +41,18 @@
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<img src="img\index22.jpg" width='1200px' height='500px' alt="1">
+						<img src="./material/2.jpg" width="1200" height='400' alt="1">
 						<div class="carousel-caption">
 						</div>
 					</div>
 					<div class="item">
-						<img src="img\index33.jpg" width='1200px' height='500px' alt="2">
+						<img src="./material/3.jpg" width='1200' height='400' alt="2">
 						<div class="carousel-caption">
 							<!-- ...-->
 						</div>
 					</div>
 					<div class="item">
-						<img src="img\index11.jpg" width='1200px' height='500px' alt="3">
+						<img src="./material/1.jpg" width='1200' height='400' alt="3">
 						<div class="carousel-caption">
 							<!-- ...-->
 						</div>
@@ -72,8 +72,20 @@
 		</div>
         <!-- this is the content -->
         <div class='row'>
-            <h3>最近更新</div>
-            
+            <h4>最近更新</h4>
+            <div class='col-md-11 col-md-offset-1'>
+            <?php 
+                require_once './func/file_include.php';
+                $con = connect_mysql($user_name);
+                mysql_select_db($db_name, $con);
+                $row = get_first_saying($table_name, $con);
+                display_saying($row, $head_pic, $name);
+                $row = get_first_pic_saying($table_name, $con);
+                display_pic_saying($row, $head_pic, $name);
+                $row = get_first_passage($table_name, $con);
+                display_passage($row, $head_pic, $name);
+            ?>
+            </div>
         </div>
 		
 		<!-- this is the btm-->
