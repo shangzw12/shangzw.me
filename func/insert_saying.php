@@ -1,5 +1,6 @@
 <?php
 	//read in config info
+    /*
 	$ctn = $_POST['ctn'];
 	$con = mysql_connect("localhost","root","shangzwszw12");
 	if(!$con){
@@ -19,5 +20,5 @@
 	)")){
 		die("insert failed!\n".mysql_error);
 	}
-	mysql_close($con);	
+	mysql_close($con);	*/
 ?>
