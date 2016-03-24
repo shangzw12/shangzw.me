@@ -16,6 +16,7 @@
 
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="./js/function.js"></script>
 
 	<title>
 		Welcome, My Friend！
@@ -32,12 +33,12 @@
 		<div class='row'>
 			<div class='col-md-7 col-md-offset-1'> <!--main content-->
 				<?php require_once './func/insert_saying.php'; ?>
-                <form action="./func/upload_file.php" method="post" enctype="multipart/form-data">
+                <form action="./func/upload_file.php" method="post" enctype="multipart/form-data" id='upload_file'>
                         <label for="file">Filename:</label>
                         <input type="file" name="file" id="file" /> 
                         <br />
-                    <input type="submit" name="submit" value="Submit" />
                 </form>
+                <button class='btn-default' onclick='upload_file()'>submit</button>
                 <?php require_once './func/insert_pic_saying.php'; ?>
                 <?php require_once './func/insert_passage.php'; ?>
 			</div>

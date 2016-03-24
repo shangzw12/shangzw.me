@@ -120,4 +120,12 @@
 		</div>
 		</div>";
     }
+    function insert_pic_saying($content, $url){
+        $con = connect_mysql("blackpan_shangzw");
+        mysql_select_db("blackpan_shangzw.me", $con);
+        $sql = "insert into $table_name value('Shangzw','$content',0,199,default,'pic_saying','$url')";
+        if(!mysql_query($sql, $con)){
+            die("insert failed!".mysql_error());
+        }
+    }
 ?>

@@ -1,4 +1,8 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<body>
 <?php
+    require_once 'file_include.php';
 if ($_FILES["file"]["error"] > 0){
     echo "Error: " . $_FILES["file"]["error"] . "<br />";
   }
@@ -29,10 +33,17 @@ else{
             move_uploaded_file($_FILES["file"]["tmp_name"],
             "../upload/" . $_FILES["file"]["name"]);
             echo "Stored in: " . "../upload/" . $_FILES["file"]["name"];
+            insert_pic_saying("this is a test!","../upload/1.jpg");
         }
     }
   }
   else{
     echo "Invalid file";
   }
+   $url="http://www.shangzw.me/my_page.php";
+   echo "<script language=\"javascript\">";
+   echo "location.href=\"$url\"";
+   echo "</script>";
 ?>
+</body>
+</html>
