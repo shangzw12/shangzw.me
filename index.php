@@ -5,18 +5,7 @@
 	<meta charset="utf-8">
 	<!-- icon -->
 	<link href="icon/1.jpg" rel="shortcut icon">
-	<!-- 新 Bootstrap 核心 CSS 文件 -->
-	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
-	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-
-	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+	<?php require_once './for_include/js_css.php'; ?>
 	<title>
 		Welcome, My Friend！
 	</title>
@@ -30,7 +19,6 @@
 		<!-- 导航栏 -->
 		<?php require_once './func/nav.php'; echo $nav ; ?>
 		<!-- this is the pic -->
-		<div class='container'>
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
@@ -41,18 +29,18 @@
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<img src="./material/2.jpg" width="1200" height='400' alt="1">
+						<img src="./material/2.jpg" width='100%'  alt="1" >
 						<div class="carousel-caption">
 						</div>
 					</div>
 					<div class="item">
-						<img src="./material/3.jpg" width='1200' height='400' alt="2">
+						<img src="./material/3.jpg" width='100%'  alt="2">
 						<div class="carousel-caption">
 							<!-- ...-->
 						</div>
 					</div>
 					<div class="item">
-						<img src="./material/1.jpg" width='1200' height='400' alt="3">
+						<img src="./material/1.jpg" width='100%'  alt="3">
 						<div class="carousel-caption">
 							<!-- ...-->
 						</div>
@@ -69,13 +57,16 @@
 					<span class="sr-only">Next</span>
 				</a>
 			</div>
-		</div>
+        <hr />
         <!-- this is the content -->
         <div class='row'>
-            <h4>最近更新</h4>
+            <div class='col-md-11 col-md-offset-1'>
+                <h4>最近更新</h4>
+            </div>
             <div class='col-md-11 col-md-offset-1'>
             <?php 
                 require_once './func/file_include.php';
+                $head_pic = './material/head_pic.jpg';
                 $con = connect_mysql($user_name);
                 mysql_select_db($db_name, $con);
                 $row = get_first_saying($table_name, $con);
@@ -87,14 +78,7 @@
             ?>
             </div>
         </div>
-		
-		<!-- this is the btm-->
-		<footer class="bs-docs-footer" role="contentinfo">
-			<div class="container ">
-				<p align='center'> Posted by: shangzw</p>
-				<p align='center'>Contact information: shangzw12@163.com </p>
-			</div>
-		</footer>
+		<?php require_once './func/page_btm.php'; ?>
 	</div>
 </body>
 

@@ -1,28 +1,26 @@
 <?php
 	$nav = <<< END
-	<nav class="navbar navbar-default">
-		<nav id="bs-navbar" class="collapse navbar-collapse">
+	<nav class="navbar ">
 				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="http://www.shangzw.me">主页</a>
+					<li  id="main_page">
+						<a href="http://www.shangzw.me"><b>主页</b></a>
 					</li>
+					<li id='saying_page'>
+						<a href="http://www.shangzw.me/saying.php"><b>说说</b></a>
+					</li id='think_page'>
 					<li>
-						<a href="http://www.shangzw.me/saying.php">说说</a>
+						<a href="http://www.shangzw.me/passages.php"><b>所思</b></a>
 					</li>
-					<li>
-						<a href="http://www.shangzw.me/passages.php">所思</a>
+					<li id='like_page'>
+						<a href="http://www.shangzw.me/collections.php"><b>不错哦</b></a>
 					</li>
-					<li>
-						<a href="http://www.shangzw.me/collections.php">不错哦</a>
-					</li>
-					<li>
-						<a href="http://www.shangzw.me/say_something.php">说点啥</a>
+					<li id='to_say_page' >
+						<a href="http://www.shangzw.me/say_something.php"><b>说点啥</b></a>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="http://www.shangzw.me">shangzw.me</a></li>
 				</ul>
-		</nav>
 	</nav>
 END;
 ?>

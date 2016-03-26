@@ -33,7 +33,7 @@ else{
             move_uploaded_file($_FILES["file"]["tmp_name"],
             "../upload/" . $_FILES["file"]["name"]);
             echo "Stored in: " . "../upload/" . $_FILES["file"]["name"];
-            insert_pic_saying("this is a test!","../upload/1.jpg",$user_name, $db_name, "Shangzw");
+            insert_pic_saying("this is a test!","../upload/". $_FILES["file"]["name"],$user_name, $db_name, "Shangzw",$table_name);
         }
     }
   }

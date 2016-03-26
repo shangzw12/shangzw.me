@@ -34,4 +34,5 @@ note:
 	mysql_fecth_array 返回值是一个array！
 	php里面的字符串需要自己用引号进行标定！ 也就是说php就是一个翻译！！！
     limit n 查询n条记录
-	
+	对于suto_increment的变量来说，可以通过default来指定相应的值。
+    
