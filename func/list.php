@@ -13,10 +13,11 @@
 		and creat_time <= date_add(timestamp('$one_time[0]'),interval 30 day)";
 		//$sql = 'SELECT count(*) from saying';
 		$one_time_count = mysql_fetch_array(mysql_query($sql, $con));
+        $my_time = substr($one_time[0],0,7);
 		//查询，返回计数
 		echo 
 		"
-		<p><a href = 'search_one_time.php?time = '$one_time[0]''>$one_time[0] ($one_time_count[0])</a></p>
+		<p><a href = 'search_one_time.php?time = '$one_time[0]''>$my_time($one_time_count[0])</a></p>
 		";
 		echo "\n";
 	}
