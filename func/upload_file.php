@@ -34,10 +34,12 @@ else{
                  echo $_FILES["file"]["name"] . " already exists. ";
             }
             else {
+                $temp_name = date('Ymdhis');
+                $temp_name .= ".jpg";
                 move_uploaded_file($_FILES["file"]["tmp_name"],
-                "../upload/" . $_FILES["file"]["name"]);
+                "../upload/" . $temp_name);
                 echo "Stored in: " . "../upload/" . $_FILES["file"]["name"];
-                insert_pic_saying("this is a test!","../upload/". $_FILES["file"]["name"],$user_name, $db_name, "Shangzw",$table_name);
+                insert_pic_saying("this is a test!","../upload/". $temp_name,$user_name, $db_name, "Shangzw",$table_name);
             }
         }
   }

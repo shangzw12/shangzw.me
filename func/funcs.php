@@ -1,13 +1,6 @@
 <?php 
     //以下函数都默认已经连接到相应数据库
     require_once 'file_include.php';
-    function connect_mysql($user_name){
-        $con = mysql_connect("localhost",$user_name, "shangzwszw12");
-        if(!$con){
-            die('Connect failed!'.mysql_error());
-        }
-        return $con;
-    }
     function get_first_saying($table_name, $con){
         $sql = "SELECT * from $table_name where type = 'saying' order by creat_time DESC limit 1";
         $res = mysql_query($sql, $con);

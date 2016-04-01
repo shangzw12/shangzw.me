@@ -1,6 +1,7 @@
 <?php
 	require_once './func/file_include.php';
-	$con = mysql_connect("localhost",$user_name,"shangzwszw12");
+	#$con = mysql_connect("localhost",$user_name,"shangzwszw12");
+    $con = connect_mysql($user_name);
 	if(!$con){
 		die("connect failed\n" .mysql_error());
 	}
@@ -9,7 +10,7 @@
 		$sql = "SELECT * from $table_name where type = 'saying' or type = 'pic_saying' order by creat_time DESC";
 		$saying = mysql_query($sql,$con);
 		//echo $saying;
-		while($row = mysql_fetch_array($saying,MYSQL_BOTH)){
+		while($row = mysql_fetch_array($saying)){
             if ($row[type] == "saying")
 			    display_saying($row, $head_pic, $name);
             elseif ($row[type] == "passage") {

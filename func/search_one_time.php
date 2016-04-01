@@ -1,6 +1,7 @@
 <?php 
-	require_once './func/file_include.php';
-	$con = mysql_connect('localhost',$user_name,'shangzwszw12');
+	require_once 'file_include.php';
+	#$con = mysql_connect('localhost',$user_name,'shangzwszw12');
+    $con = connect_mysql($user_name);
 	if(!$con){
 		die('Connect failed!\n'.mysql_error());
 	}

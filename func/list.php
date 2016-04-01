@@ -1,6 +1,7 @@
 <?php 
 	require_once 'file_include.php';
-	$con = mysql_connect('localhost',$user_name,'shangzwszw12');
+	#$con = mysql_connect('localhost',$user_name,'shangzwszw12');
+    $con = connect_msyql($user_name);
 	if(!$con) { die('Connect failed!\n').mysql_error;}
 	mysql_select_db($db_name, $con);
 	$sql = "SELECT distinct date_format(date_sub(creat_time, interval dayofmonth(creat_time) - 1 day),'%Y-%m-%d')
