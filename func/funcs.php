@@ -3,20 +3,20 @@
     require_once 'file_include.php';
     function get_first_saying($table_name, $con){
         $sql = "SELECT * from $table_name where type = 'saying' order by creat_time DESC limit 1";
-        $res = mysql_query($sql, $con);
-        $res = mysql_fetch_array($res);
+        $res = my_query($sql, $con);
+        $res = my_fetch_array($res);
         return $res;
     }
     function get_first_passage($table_name, $con){
         $sql = "SELECT * from $table_name where type = 'passage' order by creat_time DESC limit 1";
-        $res = mysql_query($sql, $con);
-        $res = mysql_fetch_array($res);
+        $res = my_query($sql, $con);
+        $res = my_fetch_array($res);
         return $res;
     }
     function get_first_pic_saying($table_name, $con){
         $sql = "SELECT * from $table_name where type = 'pic_saying' order by creat_time DESC limit 1";
-        $res = mysql_query($sql, $con);
-        $res = mysql_fetch_array($res);
+        $res = my_query($sql, $con);
+        $res = my_fetch_array($res);
         return $res;
     }
     function display_comment_btm($row,$name){
@@ -110,19 +110,19 @@
     }
     function insert_pic_saying($content, $url, $user_name, $db_name, $editor, $table_name){
         $con = connect_mysql($user_name);
-        mysql_select_db($db_name, $con);
+        select_db($db_name, $con);
         
         $sql = "insert into $table_name value ('$editor','$content',0,default,default,'pic_saying','$url')";
-        if(!mysql_query($sql, $con)){
+        if(!my_query($sql, $con)){
             die("insert failed!".mysql_error());
         }
     }
     function insert_saying($content, $user_name, $db_name, $editor, $table_name){
         $con = connect_mysql($user_name);
-        mysql_select_db($db_name, $con);
+        select_db($db_name, $con);
         
         $sql = "insert into $table_name value ('$editor','$content',0,default,default,'saying','')";
-        if(!mysql_query($sql, $con)){
+        if(!my_query($sql, $con)){
             die("insert failed!".mysql_error());
         }
     }

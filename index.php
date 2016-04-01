@@ -68,7 +68,7 @@
                 require_once './func/file_include.php';
                 $head_pic = './material/head_pic.jpg';
                 $con = connect_mysql($user_name);
-                mysql_select_db($db_name, $con);
+                select_db($db_name, $con);
                 $row = get_first_saying($table_name, $con);
                 display_saying($row, $head_pic, $name);
                 $row = get_first_pic_saying($table_name, $con);

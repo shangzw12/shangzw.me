@@ -7,4 +7,13 @@
         }
         return $con;
     }
+    function select_db($db_name, $con){
+        return mysql_select_db($db_name, $con);
+    }
+    function my_query($con, $sql){
+        return mysql_query($sql, $con);
+    }
+    function my_fetch_array($var){
+        return mysql_fetch_array($var);
+    }
 ?>
